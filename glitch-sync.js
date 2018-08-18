@@ -5,6 +5,7 @@ var colors = require('colors');
 const { exec } = require('child_process');
 
 var command = "";
+var debug = true;
 
 //Making the command, env vars need to be first to have sync work correctly
 command += "GLITCH_PROJECT_ID='" + config.projectID + "' ";
@@ -23,7 +24,7 @@ console.log(command.dim);
 
 exec(command, (err, stdout, stderr) => {
     if (err) {
-        console.log("Error: could not run command, make sure that sync-config is correct");
+        console.log("Error: could not run command, make sure that sync-config is correct".red);
         return;
     }
 

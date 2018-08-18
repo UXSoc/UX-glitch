@@ -24,5 +24,3 @@ Type `!painting` to see if it is up
 Simply run the command `node bot.js`
 
 ![val wow wow](./img/val.jpg)
-
-Test4
