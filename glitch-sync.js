@@ -1,8 +1,7 @@
 debug = true
 
-var nrc = require('node-run-cmd');
 var config = require('./sync-config.json');
-
+var colors = require('colors');
 const { exec } = require('child_process');
 
 var command = "";
@@ -20,7 +19,7 @@ var dataCallback = function(data) {
     console.log(data);
 };
 
-console.log(command);
+console.log(command.dim);
 
 exec(command, (err, stdout, stderr) => {
     if (err) {
@@ -30,10 +29,13 @@ exec(command, (err, stdout, stderr) => {
 
     //if statements needed to prevent extra lines if no error or out
     if (stdout !== "") {
-        console.log(stdout);
+        console.log(stdout.green + ' repo: ' + config.repo.bold);
     }
 
     if (stderr !== "") {
-        console.log(stderr);
+        console.log(stderr.red);
     }
+
+    console.log("Done".green);
 });
+
