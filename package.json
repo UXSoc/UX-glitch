@@ -8,11 +8,13 @@
   "license": "MIT",
   "dependencies": {
     "discord.io": "github:woor/discord.io#gateway_v6",
+    "node-run-cmd": "^1.0.1",
     "simple-text-parser": "^1.0.0",
     "winston": "^2.3.1"
   },
   "scripts": {
-    "start": "node bot.js"
+    "start": "node bot.js",
+    "sync": "node sync.js"
   },
   "devDependencies": {
     "sync-glitch-cli": "^2.0.1"
