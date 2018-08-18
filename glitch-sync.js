@@ -10,7 +10,7 @@ command += "GLITCH_PROJECT_ID='" + config.projectID + "' ";
 command += "GLITCH_TOKEN='" + config.authorization + "' ";
 command += "GH_REPO='" + config.repo + "' ";
 if (debug) {
-    command += " DEBUG=sync-glitch*";
+    command += " DEBUG=sync-glitch* ";
 }
 command += "./node_modules/.bin/sync-glitch";
 

@@ -25,4 +25,4 @@ Simply run the command `node bot.js`
 
 ![val wow wow](./img/val.jpg)
 
-Test3
+Test4
