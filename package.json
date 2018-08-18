@@ -14,7 +14,8 @@
   },
   "scripts": {
     "start": "node bot.js",
-    "sync": "node glitch-sync.js"
+    "sync": "node glitch-sync.js",
+    "update": "git push && npm run sync"
   },
   "devDependencies": {
     "sync-glitch-cli": "^2.0.1"
