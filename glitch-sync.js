@@ -14,4 +14,9 @@ if (debug) {
 }
 command += "./node_modules/.bin/sync-glitch";
 
-nrc.run(command);
+var dataCallback = function(data) {
+    console.log(data);
+};
+
+console.log(command);
+nrc.run(command, { onData: dataCallback });
