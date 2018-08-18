@@ -18,11 +18,21 @@ var bot = new Discord.Client({
     autorun: true
 });
 
+//Needed to get properly formatted run id
+function randomID(low, high) {
+    //seems dumb, but string zero is needed for padding output
+    var zero = '0';
+    var padding = zero.repeat(high.toString().length);
+    var num = Math.floor(Math.random() * (high - low) + low);
+    
+    return (padding+num).slice(-padding.length);
+}
 
 bot.on('ready', function (evt) {
     logger.info('Connected');
     logger.info('Logged in as: ');
     logger.info(bot.username + ' - (' + bot.id + ')');
+    logger.info('Run Instance ID: ' + randomID(0, 999999));
 });
 
 bot.on('message', function (user, userID, channelID, message, evt) {
