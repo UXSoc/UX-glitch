@@ -243,7 +243,7 @@ function (message) {
                 logger.error(err);
             });
 
-    }).catch(function () {
+    }).catch(function (err) {
         logger.error(err)
     });
 });
