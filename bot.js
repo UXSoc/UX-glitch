@@ -156,7 +156,7 @@ new Command(
 "val-help",
 "gives information on commands",
 function (message) {
-    var help = "`Put a ! in front of each command and a : before each subcommand`\n\n";
+    var help = "`Put a ! in front of each command and a space before each subcommand`\n\n";
 
     Command.all_commands.forEach(function (element) {
         help += '**' + element.name + '** ' + element.desc + '\n';
