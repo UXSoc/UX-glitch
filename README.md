@@ -1,26 +1,26 @@
 # Valerie Bot
+A simple but powerful discord bot
 
 ## About
 
 Adds 'and PAINTING' to statements of two things separated with 'and' (hopefully) on the Fantasy Strike Discord. 
 
-Add :: https://discordapp.com/oauth2/authorize?&client_id=473280648782675978&scope=bot&permissions=2048
+Add :: https://discordapp.com/oauth2/authorize?&client_id=473280648782675978&scope=bot&permissions=3247104
 
 Type `!painting` to see if it is up
 
+Type `!val-help` for a list of all commands
 
-## Prerequisites
+## Features
+This bot is a pretty in depth template with some great features:
+- Continuous deployment, by untiling a glitch packages
+- Up to date, we use the latest (2018-08-19) version of the discord api
+- Automation makes developing painless
 
-* Must have installed Node JS
-* Must have Git installed
-
-## Setup
-
-* To install dependencies: `npm install`
-* Discord.io's gateway is currently broken so to run bots also run `npm install woor/discord.io#gateway_v6` in the main directory
+For a tutorial on how to set up this bot of one similar see DOCS.md
 
 ## Running Server
 
-Simply run the command `node bot.js`
+Simply run the command `npm start`
 
 ![val wow wow](profile.jpg/val.jpg)

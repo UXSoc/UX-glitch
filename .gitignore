@@ -4,3 +4,5 @@
 #for Webstorm
 .idea
 
+#in case of errors
+npm-debug.log

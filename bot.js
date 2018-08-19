@@ -166,7 +166,7 @@ function (message) {
     message.channel.send("```" + quotes_text[Math.floor(Math.random() * quotes_text.length)] + "```");
 });
 
-new Command(
+var imaging = new Command(
 "dink",
 "posts the best gif in the world",
 function (message) {
@@ -174,9 +174,9 @@ function (message) {
 });
 
 var on = false
-var test = new Command(
+var voicing = new Command(
 "dink-on",
-"posts the best gif in the world",
+"a command to lay ruin to your enemies",
 function (message) {
     if (on) {
         message.channel.send("Please wait your turn, dink is busy right now");
@@ -239,6 +239,17 @@ function (message) {
     });
 });
 
+new Command(
+"dink-all",
+"posts the picture and says the thing in voice chat",
+function (message) {
+    var firstPromise = new Promise(function (resolve, reject) {
+        voicing.oncall(message);
+    });
+    var firstPromise = new Promise(function (resolve, reject) {
+        imaging.oncall(message);
+    });
+});
 
 // Needs to be last so other methods are pre-loaded
 bot.login(auth.token);
