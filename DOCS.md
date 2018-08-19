@@ -62,7 +62,7 @@ This way there is no hassle while developing and they are still safe.
 ## Uptime
 The bot will likely go idle on Discord because glitch shutdowns bots after 5min of inactivity. You can use a third party service like [Uptimerobot](https://uptimerobot.com) to keep it up.
 
-Simply make an account, add new monitor, select the HTTP(s) option and add your bot url (https://glitch.com/~name-name), select 5min and create monitor.
+Simply make an account, add new monitor, select the HTTP(s) option and add your bot url (https://name-name.glitch.com/), select 5min and create monitor. Don't worry if there is an error, the site will try to ping the bot's front-end which doesn't exist. 
       
 
 
