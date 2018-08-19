@@ -182,8 +182,9 @@ function (message) {
         message.channel.send("Please wait your turn, dink is busy right now");
         return;
     }
-
     on = true;
+
+    //If not in a call, prompt
     var voiceChannel = message.member.voiceChannel;
     if (voiceChannel === undefined) {
         message.channel.send("Please enter a channel to hear dis");
@@ -191,11 +192,9 @@ function (message) {
     }
     const broadcast = bot.createVoiceBroadcast();
 
-    console.log("pk");
     voiceChannel.join().then(connection =>{
         var to_say = "get dinked on ";
         to_say += message.content.substring(message.content.indexOf(' '), 150);
-        console.log(to_say);
 
         googleTTS(to_say, 'en', 1)
             .then(function (url) {
@@ -206,34 +205,38 @@ function (message) {
 
                 download(url, options, function(err){
                     if (err) {
-
+                        logger.error(err);
                     }
 
                     broadcast.playFile('sounds/diiiink.mp3');
-                    var dispatcher = connection.playBroadcast(broadcast, {volume: 0.3});
+                    var dispatcher = connection.playBroadcast(broadcast, {volume: 0.4});
 
                     dispatcher.on('start', function () {
                         var firstPromise = new Promise(function (resolve, reject) {
+
                             setTimeout(() => {
                                 broadcast.playFile('sounds/temptalk.mp3');
                                 dispatcher = connection.playBroadcast(broadcast, {volume: 0.5});
                             }, 3000);
                         });
+
                         var secondPromise = new Promise(function (resolve, reject) {
                             setTimeout(() => {
                                 voiceChannel.leave();
                                 on = false;
                             }, 7000);
                         });
+
                     });
                 });
-
             })
             .catch(function (err) {
-                console.error(err.sta);
+                logger.error(err);
             });
 
-    }).catch(console.error);
+    }).catch(function () {
+        logger.error(err)
+    });
 });
 
 
