@@ -270,6 +270,7 @@ const app = express();
 app.listen(8080);
 setInterval(() => {
     http.get(`http://hyper-date.glitch.me/`);
+    // Interval needs to be less than 5min
 }, 180000);
 
 // Needs to be last so other methods are pre-loaded

@@ -64,5 +64,5 @@ The bot will likely go idle on Discord because glitch shutdowns bots after 5min 
 
 It is also recommended to have https://uptimerobot.com/ ping the site every 5min too.
 
-Keep in mind the url for local is http://[name].gltich.com, and the same for uptimerobot although you can use https. 
+Keep in mind the url for local is http://[name].gltich.me/, and the same for uptimerobot although you can use https. 
 
