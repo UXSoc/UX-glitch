@@ -9,7 +9,7 @@ Add :: https://discordapp.com/oauth2/authorize?&client_id=473280648782675978&sco
 
 Type `!painting` to see if it is up
 
-Type `!val-help` for a list of all commands
+Type `!halp` for a list of all commands
 
 ## Features
 This bot is a pretty in depth template with some great features:

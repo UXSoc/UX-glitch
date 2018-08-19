@@ -153,7 +153,7 @@ function (message) {
 });
 
 new Command(
-"val-help",
+"halp",
 "gives information on commands",
 function (message) {
     var help = "`Put a ! in front of each command and a space before each subcommand`\n\n";
