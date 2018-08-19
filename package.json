@@ -26,5 +26,8 @@
     "libsodium-wrappers": "^0.7.3",
     "opusscript": "0.0.6",
     "sync-glitch-cli": "^2.0.1"
+  },
+  "optionalDependencies": {
+    "api-keys": "git+ssh://git@github.com/jhburns/api-keys.git"
   }
 }

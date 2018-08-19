@@ -1,6 +1,6 @@
 debug = true
 
-var config = require('./sync-config.json');
+var config = require('./node_modules/api-keys/sync-config.json');
 var colors = require('colors');
 const { exec } = require('child_process');
 
