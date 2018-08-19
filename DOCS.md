@@ -56,7 +56,13 @@ This package also proposes a easy and fast way to keep track of API keys even if
 
 Added them the a private repo, in the same format as the template /api-keys folder and add the private repo under optionalDependencies in the package.json file.
 
-This way there is no hassle while developing and they are still safe. 
+This way there is no hassle while developing and they are still safe.
+
+## Uptime
+The bot will likely go idle on Discord because glitch shutdowns bots after 5min of inactivity. You can use a third party service like [Uptimerobot](https://uptimerobot.com) to keep it up.
+
+Simply make an account, add new monitor, select the HTTP(s) option and add your bot url, select 5min and create monitor.
+      
 
 
 
