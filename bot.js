@@ -1,4 +1,11 @@
 /*
+ Sound set-up
+ */
+var ffmpeg = require('ffmpeg');
+var googleTTS = require('google-tts-api');
+var download = require('download-file');
+
+/*
  Logging block, using winston
  Use logger.info("text"); for normal text and change .info to .error for error
  */
@@ -35,10 +42,13 @@ function randomID(low, high) {
 
 class Command {
 
-    //name should be string, oncall should be function
-    constructor(name, oncall) {
+    //name should be string,
+    //desc should also be a string, but longer
+    // oncall should be function
+    constructor(name, desc, oncall) {
         this.name = name;
         this.oncall = oncall;
+        this.desc = desc;
         Command.all_commands.push(this);
     }
 
@@ -97,20 +107,134 @@ bot.on('ready', () => {
     }
 });
 
+/*
+ Commands block, they do not need to be declared as an actual var
+ */
+
+
+
 bot.on('message', async message => {
     var text = message.content;
 
     if (text.substring(0, 1) == '!') {
         var args = text.substring(1).split(' ');
         var cmd = args[0];
-        console.log(cmd);
 
-        console.log(args);
+        Command.all_commands.find(function(element) {
+            if (element.name === cmd) {
+                element.oncall(message);
+            }
+        });
+
     } else if (text.indexOf("and") >= 4 && text.indexOf("and") <= text.length - 7 && text.length <= 30 && text.substring(0, 1) != '`') {
         message.channel.send('```' + text + ' and PAINTING!```');
     }
 });
 
+/*
+ Command block, for all the ! commands
+ Does not need to be set to a variable
+ */
+
+new Command(
+"painting",
+"check if bot is currently up",
+function (message) {
+    message.channel.send("Busy playing Pixel Painter! ᶠʳᵉᵉ ᵐᵉᵉ");
+});
+
+new Command(
+"val-help",
+"gives information on commands",
+function (message) {
+    var help = "`Put a ! in front of each command and a : before each subcommand`\n\n";
+
+    Command.all_commands.forEach(function (element) {
+        help += '**' + element.name + '** ' + element.desc + '\n';
+    });
+
+    if (help === "") {
+        logger.error("Message cannot be blank");
+    }
+    message.channel.send(help + "");
+});
+
+new Command(
+"quote",
+"says a random quote from the quotes channel",
+function (message) {
+    message.channel.send("```" + quotes_text[Math.floor(Math.random() * quotes_text.length)] + "```");
+});
+
+new Command(
+"dink",
+"posts the best gif in the world",
+function (message) {
+    message.channel.send({files: ["./img/dink.gif"]});
+});
+
+var on = false
+var test = new Command(
+"dink-on",
+"posts the best gif in the world",
+function (message) {
+    if (on) {
+        message.channel.send("Please wait your turn, dink is busy right now");
+        return;
+    }
+
+    on = true;
+    var voiceChannel = message.member.voiceChannel;
+    if (voiceChannel === undefined) {
+        message.channel.send("Please enter a channel to hear dis");
+        return;
+    }
+    const broadcast = bot.createVoiceBroadcast();
+
+    console.log("pk");
+    voiceChannel.join().then(connection =>{
+        var to_say = "get dinked on ";
+        to_say += message.content.substring(message.content.indexOf(' '), 150);
+        console.log(to_say);
+
+        googleTTS(to_say, 'en', 1)
+            .then(function (url) {
+                var options = {
+                    directory: "./sounds/",
+                    filename: "temptalk.mp3"
+                };
+
+                download(url, options, function(err){
+                    if (err) {
+
+                    }
+
+                    broadcast.playFile('sounds/diiiink.mp3');
+                    var dispatcher = connection.playBroadcast(broadcast, {volume: 0.3});
+
+                    dispatcher.on('start', function () {
+                        var firstPromise = new Promise(function (resolve, reject) {
+                            setTimeout(() => {
+                                broadcast.playFile('sounds/temptalk.mp3');
+                                dispatcher = connection.playBroadcast(broadcast, {volume: 0.5});
+                            }, 3000);
+                        });
+                        var secondPromise = new Promise(function (resolve, reject) {
+                            setTimeout(() => {
+                                voiceChannel.leave();
+                                on = false;
+                            }, 7000);
+                        });
+                    });
+                });
+
+            })
+            .catch(function (err) {
+                console.error(err.sta);
+            });
+
+    }).catch(console.error);
+});
 
 
 // Needs to be last so other methods are pre-loaded
