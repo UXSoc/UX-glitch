@@ -260,5 +260,17 @@ function (message) {
     });
 });
 
+/*
+ Needs to ping itself to no get shut down
+ */
+const http = require('http');
+const express = require('express');
+const app = express();
+
+app.listen(8080);
+setInterval(() => {
+    http.get(`http://hyper-date.glitch.me/`);
+}, 180000);
+
 // Needs to be last so other methods are pre-loaded
 bot.login(auth);

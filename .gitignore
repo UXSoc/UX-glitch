@@ -9,3 +9,6 @@ npm-debug.log
 
 #prevent api keys from leaking
 .env
+
+#for the self ping
+/temp/*
