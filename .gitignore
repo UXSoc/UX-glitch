@@ -6,3 +6,6 @@
 
 #in case of errors
 npm-debug.log
+
+#prevent api keys from leaking
+.env
