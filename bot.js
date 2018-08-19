@@ -68,7 +68,15 @@ Command.init();
  Main Discord BLock
  */
 const Discord = require('discord.js');
-var auth = require('./auth.json');
+
+//Private repo may not be loaded
+
+var fs = require('fs');
+if (fs.existsSync('./node_modules/api-keys/auth.json')) {
+    var auth = require('./node_modules/api-keys/auth.json');
+} else {
+    
+}
 
 const bot = new Discord.Client({});
 
