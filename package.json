@@ -17,7 +17,6 @@
   },
   "scripts": {
     "start": "node bot.js",
-    "testing": "node testing.js",
     "sync": "node glitch-sync.js",
     "update": "git push && npm run sync"
   },
