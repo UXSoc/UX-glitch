@@ -264,8 +264,7 @@ new Command(
 "upp",
 "gets how long the val has been painting for",
 function (message) {
-
-    console.log('I have been painting for about ' + getUptime());
+    message.channel.send('I have been painting for about ' + getUptime());
 });
 
 function getUptime() {
