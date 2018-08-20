@@ -260,6 +260,34 @@ function (message) {
     });
 });
 
+new Command(
+"upp",
+"gets how long the val has been painting for",
+function (message) {
+
+    console.log('I have been painting for about ' + getUptime());
+});
+
+function getUptime() {
+    var up = process.uptime();
+    var units = 'seconds';
+
+    if (up > 60) {
+        up /= 60;
+        units = "minutes";
+    }
+    if (up > 60) {
+        up /= 60;
+        units = "hours";
+    }
+    if (up > 24 && units == "hours") {
+        up /= 24;
+        units = "days";
+    }
+
+    return '**' + Math.floor(up) + " " + units + '**';
+}
+
 /*
  Needs to ping itself to no get shut down
  */
