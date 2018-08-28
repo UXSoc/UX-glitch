@@ -138,6 +138,10 @@ bot.on('message', async message => {
     } else if (text.indexOf("and") >= 4 && text.indexOf("and") <= text.length - 7 && text.length <= 30 && text.substring(0, 1) != '`') {
         message.channel.send('```' + text + ' and PAINTING!```');
     }
+
+    if (message.channel.name === 'quotes') {
+        quotes_text.push(message.content);
+    }
 });
 
 /*
@@ -264,7 +268,7 @@ new Command(
 "upp",
 "gets how long the val has been painting for",
 function (message) {
-    message.channel.send('I have been painting for about ' + getUptime());
+    message.channel.send('I have been painting for about ' + getUptime());f
 });
 
 function getUptime() {
