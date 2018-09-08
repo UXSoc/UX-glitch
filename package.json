@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Used mostly as a proof of concept and for silliness",
   "main": "bot.js",
-  "repository": "git@github.com:renesansz/val-bot",
+  "repository": "git@github.com:jhburns/val-bot",
   "author": "Jonathan Burns",
   "license": "MIT",
   "dependencies": {
