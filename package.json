@@ -2,7 +2,7 @@
   "name": "val-bot",
   "version": "1.0.0",
   "description": "Used mostly as a proof of concept and for silliness",
-  "main": "bot.js",
+  "main": "index.js",
   "repository": "git@github.com:jhburns/val-bot",
   "author": "Jonathan Burns",
   "license": "MIT",
@@ -12,7 +12,7 @@
     "express": "^4.16.3"
   },
   "scripts": {
-    "start": "node bot.js",
+    "start": "node index.js",
     "sync": "node glitch-sync.js",
     "update": "git push && npm run sync"
   },

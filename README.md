@@ -28,6 +28,7 @@ Added them the a private repo, in the same format as the template /api-keys fold
 
 This way there is no hassle while developing and they are still safe.
 
+You can also add other people working on the project as a 'collaborator' in Github settings to allow them the update the bot. 
 
 ## Uptime
 The bot will likely go idle if webhooks are not used because glitch shutdowns bots after 5min of inactivity. Part of the bot script pings itself to prevent it from getting shut-down.
