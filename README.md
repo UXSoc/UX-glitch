@@ -1,26 +1,43 @@
-# Valerie Bot
-A simple but powerful discord bot
+# Simple Server
+A glitch integrated webserver with continuous integration. 
 
-## About
+## Node
+First install Node, https://nodejs.org/en/ which should come with npm that should be used to install with `npm i`
 
-Adds 'and PAINTING' to statements of two things separated with 'and' (hopefully) on the Fantasy Strike Discord. 
+## Bot Hosting
+This template is largely designed with free hosting over at [Glitch](https://glitch.com) in mind.
+After making an account, make a new project, which one doesn't matter.
 
-Add :: https://discordapp.com/oauth2/authorize?&client_id=473280648782675978&scope=bot&permissions=3247104
+This next step is very important so be careful. 
 
-Type `!painting` to see if it is up
+1. Open Dev tools with Right-click > Inspect and then go to the Network Tab
+1. Click on the project name in the upper right and then 'Advanced Options'
+1. Select Import from github, get access, and type in the username/repo as indicated
+1. In Network there should be an entry after downloading the repo to glitch that says `githubImport?authori...`
+1. Click on it and scroll to the Bottom where it says 'Query String Parameters'
+1. Copy the sync-config.json file in to this bot's root folder and copy all the values into it
 
-Type `!halp` for a list of all commands
+If everything worked you should be able to update to glitch automatically with `npm run update` (which also will git push for you).
 
-## Features
-This bot is a pretty in depth template with some great features:
-- Continuous deployment, by untiling a glitch packages
-- Up to date, we use the latest (2018-08-19) version of the discord api
-- Automation makes developing painless
+Also make sure to copy the same TOKEN='' from local to glitch's .env or else you will get an error.  
 
-For a tutorial on how to set up this bot of one similar see DOCS.md
+## Api Security
+This package also proposes a easy and fast way to keep track of API keys even if this is a public repo.
+
+Added them the a private repo, in the same format as the template /api-keys folder and add the private repo under optionalDependencies in the package.json file.
+
+This way there is no hassle while developing and they are still safe.
+
+
+## Uptime
+The bot will likely go idle if webhooks are not used because glitch shutdowns bots after 5min of inactivity. Part of the bot script pings itself to prevent it from getting shut-down.
+
+It is also recommended to have https://uptimerobot.com/ ping the site every 5min too.
+
+Keep in mind the url for local is http://[name].gltich.me/, and the same for uptimerobot although you can use https. 
+
 
 ## Running Server
 
-Simply run the command `npm start`
+simply run the command `npm i` then `npm start`. 
 
-![val wow wow](profile.jpg)

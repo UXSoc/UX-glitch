@@ -1,38 +1,5 @@
-# Tutorial
-This tutorial will walk though how to set up and use the site. It assumes you already have a Discord and Github account.
-
-### Cleaning
-It is recommended to delete most of the media in the project (profile.jpg, /img and /sounds) cause they are for personal enjoyment and are silly. 
-
-A large amount of the bot.js script can also be deleted (All of the Command Objects, a lot of the random statements) and package.json can be trimmed to you're liking.
-
 ## Node
 First install Node, https://nodejs.org/en/ which should come with npm that should be used to install with `npm i`
-
-## Make the App
-After logging into https://discordapp.com/developers/applications/ and click 'create a new application'. Fill in the usual info, so tips:
-- Save the bot icon to the project in case you need it later
-- Change the name or else you will be stopped from making a Bot
-
-After that go to the Bot tab and make a new one. Get the Token, it will be needed later
-
-
-Next I would advise making a test server or private channel to develop the bot.
-To add the bot, you first need admin abilities for the server and to go to https://discordapp.com/oauth2/authorize?&client_id=[BOT ID HERE]&scope=bot&permissions=8
-
-The id is also on the General Information page. The permission number is set to admin for now because you may never know what you need.
-
-##### It is very important to change the permission number later, which can be found on the bot page
-
-## Lets Get Started
-Now the bot can be run, create a file named '.env' in the root and add the line:
-```
-TOKEN='[insert token from discord here]'
-```
-This file should NOT be committed because of security reasons, this will be covered later in detail.
-
-Next run `npm start` and the bot should connect
-From here you can start editing and tweaking the bot.
 
 ## Bot Hosting
 This template is largely designed with free hosting over at [Glitch](https://glitch.com) in mind.
@@ -60,7 +27,7 @@ This way there is no hassle while developing and they are still safe.
 
 
 ## Uptime
-The bot will likely go idle on Discord because glitch shutdowns bots after 5min of inactivity. Part of the bot script pings itself to prevent it from getting shut-down.
+The bot will likely go idle if webhooks are not used because glitch shutdowns bots after 5min of inactivity. Part of the bot script pings itself to prevent it from getting shut-down.
 
 It is also recommended to have https://uptimerobot.com/ ping the site every 5min too.
 
