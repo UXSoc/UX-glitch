@@ -16,7 +16,7 @@ This next step is very important so be careful.
 1. In Network there should be an entry after downloading the repo to glitch that says `githubImport?authori...`
 1. Click on it and scroll to the Bottom where it says 'Query String Parameters' and copy them down
 1. Create a private repo called 'api-keys' similar with a file with the name "glitch-config.json" and run `npm init` there
-1. Next put the values into the file in the same format as the demo file in api-keys, then commit and push
+1. Next put the values into the file in the same format as the demo file in api-keys folder here, then commit and push
 1. Add that new repo under the optional dependencies in package.json (replacing mine) for this project and reinstall with node
 
 If everything worked you should be able to update to glitch automatically with `npm run update` (which also will git push for you).
