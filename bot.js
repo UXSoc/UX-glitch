@@ -1,1 +1,1 @@
-cosole.log("Does nothing");
+console.log("Does nothing");
