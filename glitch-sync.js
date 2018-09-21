@@ -1,5 +1,3 @@
-debug = true
-
 const config = require('./node_modules/api-keys/glitch-config.json');
 var colors = require('colors');
 const { exec } = require('child_process');

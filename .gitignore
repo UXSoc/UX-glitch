@@ -1,6 +1,3 @@
-#temp sound bite shouldn't be stored
-/sounds/temptalk.mp3
-
 #for Webstorm
 .idea
 
@@ -10,5 +7,5 @@ npm-debug.log
 #prevent api keys from leaking
 .env
 
-#for the self ping
-/temp/*
+#prevents bloat
+/node_modules
