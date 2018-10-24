@@ -1,23 +1,39 @@
 # Simple Server
 A glitch integrated webserver with continuous integration. 
 
+- **npm i** to install, run first if already set-up
+- **npm run update** after committing to update glitch and push that commit
+- **npm start** run locally, for testing 
+
 ## Node
 First install Node, https://nodejs.org/en/ which should come with npm that should be used to install with `npm i`
 
 ## Bot Hosting
 This template is largely designed with free hosting over at [Glitch](https://glitch.com) in mind.
-After making an account, make a new project, which one doesn't matter.
+Make an **account** and then a new project, which one doesn't matter.
 
-This next step is very important so be careful. 
+## Make Private Repo
 
-1. Open Dev tools with Right-click > Inspect and then go to the Network Tab
+1. Make another private repo, call it 'api-keys' and run `npm init` in it, you can just mash enter for the prompts
+1. Copy the file "glitch-config.json" with the same name and contents over to this repo
+1. In package.json in the original repo, 'UX-glitch', change this line so it is your Github username instead:
+```
+  "optionalDependencies": {
+    "api-keys": "git+ssh://git@github.com/[Your Username]/api-keys.git"
+  }
+```
+
+### Setup
+
+1. Open Dev tools with Right-click > Inspect and then go to the Network Tab in the Glitch page
 1. Click on the project name in the upper right and then 'Advanced Options'
-1. Select Import from github, get access, and type in the username/repo as indicated
+1. Click on the upper right on the project name
+1. Select Import from github, give access, and type in the username/repo as indicated
 1. In Network there should be an entry after downloading the repo to glitch that says `githubImport?authori...`
-1. Click on it and scroll to the Bottom where it says 'Query String Parameters' and copy them down
-1. Create a private repo called 'api-keys' similar with a file with the name "glitch-config.json" and run `npm init` there
-1. Next put the values into the file in the same format as the demo file in api-keys folder here, then commit and push
-1. Add that new repo under the optional dependencies in package.json (replacing mine) for this project and reinstall with node
+1. Click on it and scroll to the Bottom where it says 'Query String Parameters' 
+1. Copy them in the same format to the other api-keys repo, in the glitch-config file 
+1. Commit and push the api-keys folder
+1. Run `rm /node_modules -rf` in this project and then rerun `npm i` 
 
 If everything worked you should be able to update to glitch automatically with `npm run update` (which also will git push for you).
 
