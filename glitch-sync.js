@@ -14,10 +14,6 @@ if (debug) {
 }
 command += "./node_modules/.bin/sync-glitch";
 
-var dataCallback = function(data) {
-    console.log(data);
-};
-
 console.log(command.dim);
 
 exec(command, (err, stdout, stderr) => {
