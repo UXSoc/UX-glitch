@@ -12,7 +12,7 @@
     "express": "^4.16.3"
   },
   "scripts": {
-    "start": "node bot.js",
+    "start": "node index.js",
     "sync": "node glitch-sync.js -d -p",
     "safe-sync": "node glitch-sync.js -d",
     "update": "git push && npm run sync"
