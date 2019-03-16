@@ -41,7 +41,8 @@ exec(command, (err, stdout, stderr) => {
 
     //if statements needed to prevent extra lines if no error or out
     if (stdout !== "") {
-        console.log(stdout.green + ' repo: ' + config.repo.bold);
+        console.log(stdout.green);
+        console.log( + ' repo: ' + config.repo.bold);
     }
 
     if (stderr !== "") {
