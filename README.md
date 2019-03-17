@@ -57,4 +57,3 @@ Keep in mind the url for local is http://[name].gltich.me/, and the same for upt
 ## Running Server
 
 Simply run the command `npm start`. 
-
