@@ -38,8 +38,41 @@ If you are unsure of your repo name to use, it is under the 'Clone or Download' 
 
 After that, clone your fork of this repo:
 
- `git clone git@github.com:[replace with your username]/ux-glitch.git`
+ `git clone git@github.com:[replace with your username]/UX-glitch.git`
  
- ## 
+## Setup Hosting
+The order these next step are done in is very important, so be careful
 
+1. Copy *glitch-config.json* and *package.json* of the *api-keys/* folder in this repo into your 'api-keys' repo.
+    - **NOT** the *travis.enc* file.
+    - Make sure the files are in the root of the project
+1. Go to [Glitch](Glitch.com) and click the 'New Project' Button -> Select any of the 'hello' options.
 
+    ![New project dialog](/Documentation/img/hello.png)
+
+1. In the project editor Right-Click -> Inspect in Chrome or similar in other browsers to open the inspector.
+1. Next in the lower right click "Tools" -> "Git, Import and Export" -> "Import From Github" and put in the name of this repo which should be `[your username]/UX-glitch`.
+1. Hit 'OK'
+    
+    ![Getting keys](/Documentation/img/getting-keys.png)
+    
+1. In the Inspector, go the the Networking tab. There should be an entry that starts with `githubImport`. Select it and scroll to the bottom of the `Headers` part of the request.
+1. There should be an entry `Query String Parameters` which you should copy into the 'api-keys' repo *glitch-config.json* to their respective entries.
+
+    ![Example of my keys](/Documentation/img/my-keys.png)
+    
+    > Note: thesee values are important and should be kept secure
+1. [Git commit, git push](http://git.huit.harvard.edu/guide/), to your api-keys repo.
+1. In this repo, change the 'api-keys' line in *package.json* under `optionalDependencies` to your repo:
+    
+    `"api-keys": git+ssh://git@github.com/[your username]/api-keys.git` 
+
+1. Run `npm i` here.
+1. Make a change here, for example in *index.js* or the *README.md* then push changes.
+1. Run the command `npm run sync` and check Glitch to see that it changes!
+
+![Connected dialog](/Documentation/img/connected-glitch.png) 
+
+#### A green 'connected' in the upper right of the Glitch editor means it worked.
+
+## Finishing Up 

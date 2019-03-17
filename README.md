@@ -21,6 +21,8 @@ Glitch is perfect for bots, small projects, and fun apps. Here's why you should 
 
 ## How To Use
 
+For basic usage, run `npm i`, then `npm start` to get a basic web server.
+
 If you're ready to get started check out this [tutorial to setup](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/SETUP.md).
 
 If you want know what else you can do check out [extras](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/EXTRAS.md) to customize your workflow.
