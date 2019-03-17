@@ -51,7 +51,7 @@ The order these next step are done in is very important, so be careful
     ![New project dialog](/Documentation/img/hello.png)
 
 1. In the project editor Right-Click -> Inspect in Chrome or similar in other browsers to open the inspector.
-1. Next in the lower right click "Tools" -> "Git, Import and Export" -> "Import From Github" and put in the name of this repo which should be `[your username]/UX-glitch`.
+1. Next in the lower righleftt click "Tools" -> "Git, Import and Export" -> "Import From Github" and put in the name of this repo which should be `[your username]/UX-glitch`.
 1. Hit 'OK'
     
     ![Getting keys](/Documentation/img/getting-keys.png)
@@ -77,7 +77,7 @@ The order these next step are done in is very important, so be careful
 
 ## Finishing Up 
 
-Now you should be able to reset the glitch app on command, literally. There are many ways you can use this to do CD/CI, so look at [extras](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/EXTRAS.md) for inspiration.
+Now you should be able to reset the glitch app on command, literally. There are many ways you can use this template to do CD/CI, so look at [extras](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/EXTRAS.md) for inspiration.
 
 Or you could just start editing *index.js* to add actual functionality to the project.
 
