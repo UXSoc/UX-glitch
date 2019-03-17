@@ -76,3 +76,16 @@ The order these next step are done in is very important, so be careful
 #### A green 'connected' in the upper right of the Glitch editor means it worked.
 
 ## Finishing Up 
+
+Now you should be able to reset the glitch app on command, literally. There are many ways you can use this to do CD/CI, so look at [extras](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/EXTRAS.md) for inspiration.
+
+Or you could just start editing *index.js* to add actual functionality to the project.
+
+## Troubleshooting
+
+There are a couple of ways this could not work, try the following:
+- Check that *./node_modules/api-key/glitch-config.json* exists after running `npm i`
+- Make sure you pushed all your changes in the 'api-keys' repo. Visit the repo page in the browser if needed.
+- See if `npm i` is able to download the optional dependency.
+- If *githubImport...* isn't available in the networks tab, try importing again. 
+
