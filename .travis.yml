@@ -8,7 +8,7 @@ cache:
   - node_modules
 
 env:
-  global:
+  global: # Put your encrypted var here
     - secure: "YaU280HX8QqHo55599rMcaBIoIW55/E2cv0dxvy+B56Px6PhJn8SDWIQ79af2fupG3KvUv1wD8kXtsauqGMcVVsmle0Cop+ZsooKp10bJv1/8YXFJURTzipu/d82h8hLS0etckX73m2Vv5fzS8HuOE3a0K8VI6kHDT7v6Np9WWoD4D57kMTUwiwgPSsJc8eOxYREcuLvuIWU1wlS6VwjxeDUZ1l+EWd9sRBqL93ACfVgWzCmwo5iS6FlCSQdlSgCxfgJ8YoBftndcrI7FgAClVPCJ+EwELAL8GLGDrj958OU3AICerSdVJlnBt/KYHstH0r2/5+SL5OYhJjezB/NAW6hWQ1EV+fH4+SuW3NZtEg+ZAxCCrU+jDk9MIkfFPuRNl7eRZwGdOV33fJMKt+wZYOTD70r7KEfecRM3JXwlUjqbRPrmiQHap0BHOhsh6NdqxuHhJofl3HJxJBrYCvPj6gVUHIf08m6cbfEtwegUhJHSR3kqTGwv4cYQULeXheBl7PKy8XFyfdVdbOc32e8Cza79JZssu1b+cT97SqsWz9jfx043eALV+0lxx0aHqUc0VQrqeWsdGQ88VChJnbBKxydC+a6QfcLFa9Nx7owPy1CZA5lFJuptlnhqDPVu9oX4500L1NP1128kFyWUUM3LKEpqSO1VnUXzQo/sSZ9VeY="
 
 before_install:
@@ -18,6 +18,7 @@ before_install:
   $(npm bin)/set-up-ssh --key "$encrypted_c7fb6a38b66f_key" \
                         --iv "$encrypted_c7fb6a38b66f_iv" \
                         --path-encrypted-key "./api-keys/travis.enc"
+                        # Change the $encrypted_XXXXXXXX to your values
 install:
   - npm i
 
@@ -25,4 +26,4 @@ script:
   - return 0 # Add your tests, build, etc here
 
 after_success:
-  - npm run safe-sync
+  - npm run safe-sync # Make sure this is safe-sync so variables are not printed
