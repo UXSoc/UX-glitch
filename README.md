@@ -2,7 +2,7 @@
 
 # Glitch Sync Template
 
-[Glitch](https://glitch.com/) is a super cool platform that lets you edit, collaborate, and publish your [Node.js](https://nodejs.org/en/) apps. It does have [GitHub](https://github.com/UXSoc/UX-glitch) (also where you can get the source) support but lacks a lot of features.
+[Glitch](https://glitch.com/) is a super cool platform that lets you edit, collaborate, and publish your [Node.js](https://nodejs.org/) apps. It does have [GitHub](https://github.com/UXSoc/UX-glitch) (also where you can get the source) support but lacks a lot of features.
 
 This is a template to enable a lot of extra functionality, and is great way to do CD/CI.
 
@@ -21,11 +21,11 @@ Glitch is perfect for bots, small projects, and fun apps. Here's why you should 
 
 ## How To Use
 
-If you're ready to get started check out this [tutorial to set up]().
+If you're ready to get started check out this [tutorial to set up](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/SETUP.md).
 
-If you want know what else you can do check out [extras]() to customize your workflow.
+If you want know what else you can do check out [extras](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/EXTRAS.md) to customize your workflow.
 
-If you're worried about [security implication]().
+If you're concerned about [security implications](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/SECURITY_WARNING.md).
 
 ## About
 Made by Jonathan Burns, enjoy 🐟🐟
