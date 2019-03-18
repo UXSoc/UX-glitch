@@ -48,3 +48,9 @@ hobby projects and learning, no sensitive information should be involved.
 
 The authorization key found in the SETUP.md tutorial is a very important token, only share it with
 those you trust and are guaranteed to trust in the future.
+
+## Travis CI
+Making sure that Travis CI doesn't expose your secrets is also an issue. First, double-check
+that the private key used to upload to Travis isn't accidentally leaked, and the encryption
+key and iv aren't public. Only use the command `npm run safe-sync` instead of `sync` so
+no variables are printed to the public build log. If secrets are printed, remove the log. 

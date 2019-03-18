@@ -26,4 +26,4 @@ script:
   - return 0 # Add your tests, build, etc here
 
 after_success:
-  - npm run safe-sync # Make sure this is safe-sync so variables are not printed
+  - npm run safe-sync # Make to use safe-sync so secret variables aren't printed

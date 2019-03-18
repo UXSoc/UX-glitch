@@ -21,13 +21,19 @@ Glitch is perfect for bots, small projects, and fun apps. Here's why you should 
 
 ## How To Use
 
-For basic usage, run `npm i`, then `npm start` to get a basic web server.
+For basic usage, run `npm i`, then `npm start` to get a web server.
 
 Start with a [tutorial to setup with Glitch](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/SETUP.md).
 
 If you want know what else you can do check out [extras](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/EXTRAS.md#extras) to customize your workflow.
 
 Consider [security implications](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/SECURITY_WARNING.md#security).
+
+## Commands After Setup
+
+- `npm run sync` will make Glitch redeploy the project to the current main branch of this GitHub repo.
+- `npm run safe-sync` does the same as `sync`, but the command being run isn't printed to console, which hides the secret variables. Ideal for Travis CI, or any public place sync is being ran.
+- `npm run update` with run `git push`, then `sync` for you. Simplifies deploying changes from 2 commands to 1.  
 
 ## About
 Made by Jonathan Burns, enjoy the 🐟🐟
