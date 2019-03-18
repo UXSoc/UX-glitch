@@ -26,6 +26,7 @@ For basic usage, run `npm i`, then `npm start` to get a web server.
 Start with a [tutorial to setup with Glitch](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/SETUP.md).
 
 Or click for the video tutorial to setup:
+
 [![Glitch.com and GitHub Sync Setup Tutorial](http://img.youtube.com/vi/xaGw1fUyrzc/0.jpg)](https://youtu.be/xaGw1fUyrzc "Glitch.com and GitHub Sync Setup Tutorial")
 
 If you want know what else you can do check out [extras](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/EXTRAS.md#extras) to customize your workflow.
