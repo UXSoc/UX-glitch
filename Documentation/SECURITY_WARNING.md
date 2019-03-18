@@ -7,6 +7,9 @@ There are some security issues related to how GitHub's and Glitch's API works, w
 You are solely responsible for managing any of your secret information, including authorization, and project id tokens. 
 Do not be careless with any private/secret information. Use at your own risk.
 
+You may want to consider using [Two-Factor Authentication](https://help.github.com/en/articles/securing-your-account-with-two-factor-authentication-2fa).
+Also may want to consider setting up a developer token to work as way to potentially alert you if keys are leaked, from [this tutorial](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/EXTRAS.md#improve-security).
+
 ## Issues
  
 ### GitHub Private Repos
