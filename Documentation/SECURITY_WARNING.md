@@ -1,6 +1,7 @@
 # Security
 
-There are some security issues related to how GitHub's and Glitch's API works, which may make some aspects less then ideal. As a result you may want to limit your workflow implementation and reconsider which collaborators/platforms you trust. 
+There are some security issues related to how GitHub's and Glitch's API works, which may make some aspects less then ideal. As a result you may want to limit your workflow implementation and reconsider which collaborators/platforms you trust.
+Do not use this template for any work with any potential serious implication.
 
 ## Warning
 
@@ -46,4 +47,4 @@ be considered insecure and anyone using it should understand the risks. This is 
 hobby projects and learning, no sensitive information should be involved. 
 
 The authorization key found in the SETUP.md tutorial is a very important token, only share it with
-those you trust and are sure to trust in the future.
+those you trust and are guaranteed to trust in the future.
