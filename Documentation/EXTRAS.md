@@ -83,7 +83,7 @@ second `before-command` line: [here](https://github.com/UXSoc/UX-glitch/blob/61f
 ### Troubleshooting
 Here is what a successful build, and deploy looks like: https://travis-ci.com/UXSoc/UX-glitch/builds/104726741 
 
-- Were the key and iv values uploaded correctly? Try uploading them manually by using the `--pring-key` argument on step 6.
+- Were the key and iv values uploaded correctly? Try uploading them manually by using the `--print-key` argument on step 6.
 - Did you make sure to copy *travis.enc*?
 - Were the key and iv variable names substituted correctly, they both lead with a `$` and don't have an extra space before the end quote? 
 
