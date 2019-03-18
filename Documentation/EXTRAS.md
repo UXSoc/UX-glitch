@@ -1,6 +1,6 @@
 # Extras
 
-There are a lot of interesting thing you can do with this project, for example https://github.com/UXSoc/UX-glitch/ automatically deploys to https://golden-break.glitch.me/ after every `git push`.
+There are a lot of interesting things you can do with this project, for example https://github.com/UXSoc/UX-glitch/ automatically deploys to https://golden-break.glitch.me/ after every `git push`.
 
 ## Basic DevOps
 
@@ -84,7 +84,8 @@ the private key can avoid being leaked.
     
 1. Install the Travis client with `gem install travis` and login to Travis with `travis login`.
 1. Run `travis encrypt-file travis`, which will upload the encryption key, and iv for you.
-1. Copy the *travis.enc* file that should've been generated in the 'api-keys' repo, into the *api-keys/* folder in this repo.
+1. Copy the *travis.enc* file that should've been generated inside the 'api-keys' repo, into the *api-keys/* folder of this repo.
+    - Be careful to not commit and push the *travis* file in this public repo. 
 1. Next take the `travis_XXXXXXXX_key` and `travis_XXXXXXXX_iv` and substitute them into the 
 second `before-command` line: [here](https://github.com/UXSoc/UX-glitch/blob/61fef3c7f967e1e8c163ffe700a47c4b1fc7294b/.travis.yml#L18)
 
@@ -98,18 +99,19 @@ second `before-command` line: [here](https://github.com/UXSoc/UX-glitch/blob/61f
 Here is what a successful build, and deploy looks like: https://travis-ci.com/UXSoc/UX-glitch/builds/104726741 
 
 - Were the key and iv values uploaded correctly? Try uploading them manually by using the `--print-key` argument on step 6.
-- Did you make sure to copy *travis.enc*?
+- Did you make sure to copy *travis.enc* into the right place?
 - Were the key and iv variable names substituted correctly, they both lead with a `$` and don't have an extra space before the end quote? 
 
 ## Add Testing
 
 You can conveniently add testing, and stop deployment if the current
-project doesn't pass tests, by changing the `scripts` line: [which only 'returns' 0 now](https://github.com/UXSoc/UX-glitch/blob/61fef3c7f967e1e8c163ffe700a47c4b1fc7294b/.travis.yml#L26).
+project doesn't pass tests, by changing the `scripts` line: [which only does 'returns 0' now](https://github.com/UXSoc/UX-glitch/blob/61fef3c7f967e1e8c163ffe700a47c4b1fc7294b/.travis.yml#L26).
 
 ## Reset Regularly
 
-One of the disadvantages of Glitch is that it isn't consistent and anyone who can edit can mess up
-the app. A way to mitigate this is to set Travis to run the build daily, which redeploys daily.
+One of the disadvantages of Glitch is that it isn't consistent and anyone who can edit and app can mess it up. 
+As a result, apps can be left broken which is of course bad. 
+A way to mitigate this is to set Travis to redeploy daily.
 
 Go to More Options -> Settings -> Cron Jobs (at the bottom).
 
