@@ -40,6 +40,20 @@ to test.
 
 #### Enjoy coding with friends
 
+## Improve Security
+
+There is a chance that secret keys get leaked, see [security implications](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/SECURITY_WARNING.md).
+
+However, there are ways to mitigate this, consider making a personal access token, even if you don't use it.
+Doing is will result in GitHub sending you an email if the token is ever committed, which can let you know 
+if secrets may have been leaked. Do this by:
+1. Go to https://github.com/settings/tokens.
+1. Click "generate new token", and add a suitable description ie: "to trigger on key leakage".
+    ![Making a new token](/Documentation/img/fake-token.png)
+1. Click "Generate Token".
+1. Copy-Paste the token into a new field in *glitch-config.json*, for example `"warningFakeToken": AB...`
+1. Git commit, push changes, and now you should get an email if that token is every published.
+
 # Integrate with Travis CI
 
 By using [Travis CI](https://travis-ci.com/) you can expand the possibilities for CD/CI. As mentioned this
