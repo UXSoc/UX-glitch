@@ -51,7 +51,7 @@ if secrets may have been leaked. Do this by:
 1. Click "generate new token", and add a suitable description ie: "to trigger on key leakage".
     ![Making a new token](/Documentation/img/fake-token.png)
 1. Click "Generate Token".
-1. Copy-Paste the token into a new field in *glitch-config.json*, for example `"warningFakeToken": AB...`
+1. Copy-Paste the token into a new field in *glitch-config.json*, for example `"warningTokenDontUse": "AB..."`
 1. Git commit, push changes, and now you should get an email if that token is every published.
 
 # Integrate with Travis CI
