@@ -70,7 +70,7 @@ the private key can avoid being leaked.
     
 1. Install the Travis client with `gem install travis` and login to Travis with `travis login`.
 1. Run `travis encrypt-file travis`, which will upload the encryption key, and iv for you.
-1. Copy the *travis.enc* file that should've been generated to this repo, into the *api-keys/* folder.
+1. Copy the *travis.enc* file that should've been generated in the 'api-keys' repo, into the *api-keys/* folder in this repo.
 1. Next take the `travis_XXXXXXXX_key` and `travis_XXXXXXXX_iv` and substitute them into the 
 second `before-command` line: [here](https://github.com/UXSoc/UX-glitch/blob/61fef3c7f967e1e8c163ffe700a47c4b1fc7294b/.travis.yml#L18)
 
@@ -81,6 +81,8 @@ second `before-command` line: [here](https://github.com/UXSoc/UX-glitch/blob/61f
 1. Git commit, push, check to see if Travis is able to deploy your app. If so, you're done!
 
 ### Troubleshooting
+Here is what a successful build, and deploy looks like: https://travis-ci.com/UXSoc/UX-glitch/builds/104726741 
+
 - Were the key and iv values uploaded correctly? Try uploading them manually by using the `--pring-key` argument on step 6.
 - Did you make sure to copy *travis.enc*?
 - Were the key and iv variable names substituted correctly, they both lead with a `$` and don't have an extra space before the end quote? 
@@ -88,7 +90,7 @@ second `before-command` line: [here](https://github.com/UXSoc/UX-glitch/blob/61f
 ## Add Testing
 
 You can conveniently add testing, and stop deployment if the current
-project doesn't pass tests, by changing the `scripts` line: [which only 'returns' 0 now](https://github.com/UXSoc/UX-glitch/blob/61fef3c7f967e1e8c163ffe700a47c4b1fc7294b/.travis.yml#L23).
+project doesn't pass tests, by changing the `scripts` line: [which only 'returns' 0 now](https://github.com/UXSoc/UX-glitch/blob/61fef3c7f967e1e8c163ffe700a47c4b1fc7294b/.travis.yml#L26).
 
 ## Reset Regularly
 
