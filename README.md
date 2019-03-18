@@ -31,3 +31,5 @@ If you're concerned about [security implications](https://github.com/UXSoc/UX-gl
 
 ## About
 Made by Jonathan Burns, enjoy 🐟🐟
+
+Feel free to open a Pull request. 
