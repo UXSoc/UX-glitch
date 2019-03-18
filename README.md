@@ -23,11 +23,11 @@ Glitch is perfect for bots, small projects, and fun apps. Here's why you should 
 
 For basic usage, run `npm i`, then `npm start` to get a basic web server.
 
-If you're ready to get started with your own project check out this [tutorial to setup with Glitch](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/SETUP.md).
+Start with a [tutorial to setup with Glitch](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/SETUP.md).
 
-If you want know what else you can do check out [useful extras](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/EXTRAS.md) to customize your workflow.
+If you want know what else you can do check out [extras](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/EXTRAS.md#extras) to customize your workflow.
 
-If you're concerned about [security implications](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/SECURITY_WARNING.md).
+Consider [security implications](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/SECURITY_WARNING.md#security).
 
 ## About
 Made by Jonathan Burns, enjoy the 🐟🐟

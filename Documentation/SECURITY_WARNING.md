@@ -1,14 +1,14 @@
 # Security
 
-There are some security issues related to how GitHub's and Glitch's API works, which may make some aspects less then ideal. As a result you may want to limit your workflow implementation and reconsider which collaborator/platforms you trust. 
+There are some security issues related to how GitHub's and Glitch's API works, which may make some aspects less then ideal. As a result you may want to limit your workflow implementation and reconsider which collaborators/platforms you trust. 
 
 ## Warning
 
-You are solely responsible for managing any of your secret information, including authorization, and project id tokens. 
+You are solely responsible for managing all of your security, including authorization, and project id tokens. 
 Do not be careless with any private/secret information. Use at your own risk.
 
 You may want to consider using [Two-Factor Authentication](https://help.github.com/en/articles/securing-your-account-with-two-factor-authentication-2fa).
-Also may want to consider setting up a developer token to work as way to potentially alert you if keys are leaked, from [this tutorial](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/EXTRAS.md#improve-security).
+You may want to consider setting up a developer token to work as way to potentially alert you if keys are leaked, follow [this tutorial](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/EXTRAS.md#improve-security).
 
 ## Issues
  
@@ -18,10 +18,10 @@ Keeping private keys in private GitHub repos is relatively secure, as users are 
 
 ### Collaborators
 
-Private repos also have the ability to add 'Collaborators' to them, which is an easy way to share private keys. However it will give
+Private repos also have the ability to add 'Collaborators' to them, which is an easy way to share secret keys. However it will give
 unrestricted access to ALL of your keys, even if you do not want a user to have access to all of them.
 
-Consider making multiple private repositories, and only allowing a Collaborator access to the ones you want.
+Consider making multiple private repositories, and only allowing a Collaborator access to the ones you allow.
 This can be done by just adding another entry under the 'optionalDependencies' field in *package.json*. 
 For example, the 'api-keys' repo may only have keys for syncing to Glitch, while a new 'my-app-secrets' repo 
 would have keys for communication with a third-party service. Then you can only add another user as a 
@@ -36,6 +36,8 @@ The only know to do so is to follow this:
     1. `rm node_modules -rf` or similar
     1. `npm cache clean --force`
     1. `npm i`
+    
+This solution assumes that the service allow you to reset a key, including Glitch.
 
 ## Glitch's API
 This template takes advantage of an undocumented feature of Glitch's API, which could also change at any time.
