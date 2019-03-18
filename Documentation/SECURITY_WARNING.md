@@ -1,7 +1,7 @@
 # Security
 
 There are some security issues related to how GitHub's and Glitch's API works, which may make some aspects less then ideal. As a result you may want to limit your workflow implementation and reconsider which collaborators/platforms you trust.
-Do not use this template for any work with any potential serious implication.
+Do not use this template for any work with any potential serious implication of violated security.
 
 ## Warning
 
