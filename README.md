@@ -1,45 +1,9 @@
-[![Build Status](https://travis-ci.com/UXSoc/UX-glitch.svg?branch=master)](https://travis-ci.com/UXSoc/UX-glitch)
+Kurulum - Windows
 
-# Glitch Sync Template
-
-[Glitch](https://glitch.com/) is a super cool platform that lets you edit, collaborate, and publish your [Node.js](https://nodejs.org/) apps. It does have [GitHub](https://github.com/UXSoc/UX-glitch) support but lacks a lot of features.
-
-This is a template to enable a lot of extra functionality, and is great way to learn CD/CI.
-
-Glitch is perfect for bots, small projects, and fun apps. Here's why you should consider using this template: 
-### Pros
-
-- Free as in pizza 🍕 and source code 📖, by hosting on Glitch.
-- Relatively easy to setup, with full and extendable control over how deployments work. 
-- Gets all the benefits of Glitch (collaboration, live code) with a convenient way to reset changes after saving them through GitHub.
-
-### Cons
-
-- Only supports Node.js.
-- Glitch has some resource [restrictions](https://glitch.com/help/restrictions/) in place, although they are hard to hit or can be circumvented.
-- Glitch API is unfortunately not dependable, use at your own risk.
-
-## How To Use
-
-For basic usage, run `npm i`, then `npm start` to get a web server.
-
-Start with a [tutorial to setup with Glitch](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/SETUP.md).
-
-Or click for the video tutorial to setup:
-
-[![Glitch.com and GitHub Sync Setup Tutorial](http://img.youtube.com/vi/xaGw1fUyrzc/0.jpg)](https://youtu.be/xaGw1fUyrzc "Glitch.com and GitHub Sync Setup Tutorial")
-
-If you want know what else you can do check out [extras](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/EXTRAS.md#extras) to customize your workflow.
-
-Consider [security implications](https://github.com/UXSoc/UX-glitch/blob/master/Documentation/SECURITY_WARNING.md#security).
-
-## Commands After Setup
-
-- `npm run sync` will make Glitch redeploy the project to the current main branch of this GitHub repo.
-- `npm run safe-sync` does the same as `sync`, but the command being run isn't printed to console, which hides the secret variables. Ideal for Travis CI, or any public place sync is being ran.
-- `npm run update` with run `git push`, then `sync` for you. Simplifies deploying changes from 2 commands to 1.  
-
-## About
-Made by Jonathan Burns, enjoy the 🐟🐟
-
-Feel free to open a Pull request ⬆️. 
+1. Adım: Node.JS programını kurun. (nodejs.org)
+2. Adım: Projeyi bilgisayarınıza indirin.
+3. Adım: Proje dosyalarını açın, proje dosyalarının olduğu klasörde komut penceresini açın (Ctrl+Sağ tık > komut penceresini burada aç)
+4. Adım: Açılan komut penceresine npm install komutunu yazın ve modüllerin yüklenmesini bekleyin.
+5. Adım: Ayarlar.json dosyasını açıp ayarlarınızı yapın.
+6. Adım: Modüller yüklendikten sonra, komut penceresine node bot.js komutunu yazın ve botu çalıştırın.
+Botun altyapısı için kullandığım kaynak: https://github.com/AnIdiotsGuide/Tutorial-Bot
