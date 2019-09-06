@@ -1,26 +1,37 @@
 {
-  "name": "val-bot",
-  "version": "1.0.0",
-  "description": "Used mostly as a proof of concept and for silliness",
-  "main": "bot.js",
-  "repository": "git@github.com:jhburns/val-bot",
-  "author": "Jonathan Burns",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.16.3"
-  },
+  "//1": "describes your app and its dependencies",
+  "//2": "https://docs.npmjs.com/files/package.json",
+  "//3": "updating this file will download and update your packages",
+  "name": "hello-express",
+  "version": "0.0.1",
+  "description": "A simple Node app built on Express, instantly up and running.",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "sync": "node glitch-sync.js -d -p",
-    "safe-sync": "node glitch-sync.js -d",
-    "update": "git push && npm run sync"
+    "start": "node server.js"
   },
-  "devDependencies": {
-    "args": "^5.0.1",
-    "colors": "^1.3.1",
-    "sync-glitch-cli": "^2.0.1"
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "chance": "^1.0.18",
+    "common-tags": "^1.8.0",
+    "discord.js": "^11.5.1",
+    "express": "^4.16.4",
+    "generate-password": "^1.4.2",
+    "math-expression-evaluator": "^1.2.17",
+    "moment": "^2.24.0",
+    "parse-ms": "^2.1.0",
+    "quick.db": "^7.0.0-b22",
+    "request": "^2.88.0"
   },
-  "optionalDependencies": {
-    "api-keys": "git+ssh://git@github.com/jhburns/api-keys.git"
-  }
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/hello-express"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
 }
